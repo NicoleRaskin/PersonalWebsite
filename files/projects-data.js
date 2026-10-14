@@ -207,5 +207,47 @@ const projectsData = {
       { src: "./assets/Brigandier/P21_0.jpeg", alt: "Brigandier Game Concept Design", layout: "half" },          
       { src: "./assets/Brigandier/P21spread.jpg", alt: "Brigandier Game Concept Design", layout: "full" }                 
     ]
-  } 
-}
+  } ,
+
+
+100: {
+    title: "About Me",
+    // Optional placeholder images if you still want a gallery, or leave images empty/remove it
+    images: [], 
+    content: `
+      <div class="about-text-container">
+        <div class="details-container color-container">
+          <p>I'm Nicole, a game developer, UI designer, and digital illustrator based in Jerusalem.</p>
+          <p>I specialize in 2D game development using Unity, C#, and creating vintage-inspired digital art and branding.</p>
+        </div>
+      </div>
+    `
+  },
+
+  101: {
+    title: "Contact",
+    images: [],
+    content: `
+      <div class="contact-text-container">
+
+          <div class="contact-info-container">
+              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon"/>
+              <p><a href="mailto:raskin.nicole@gmail.com">raskin.nicole@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+              <img src="./assets/ig.png" alt="Email icon" class="icon contact-icon"/>
+              <p><a class="contact" href="https://www.instagram.com/raskin.nicole/">Instagram</a></p>
+          </div>
+          <div class="contact-info-container">
+              <img src="./assets/itch.png" alt="Email icon" class="icon contact-icon"/>
+              <p><a class="contact" href="https://nicoleraskin.itch.io/">itch.io</a></p>
+          </div>              
+          <div class="contact-info-container">
+              <img src="./assets/linkedin.png" alt="Email icon" class="icon contact-icon"/>
+              <p><a class="contact" href="https://www.linkedin.com/in/nicole-raskin">linkedin</a></p>
+          </div>             
+
+      </div>
+    `
+  }
+};

@@ -1,6 +1,3 @@
-// Reads ?id=<n> from the page URL, looks up that project in projectsData
-// (from projects-data.js), and fills in the title + images on project.html.
- 
 function renderProject() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
@@ -11,13 +8,20 @@ function renderProject() {
  
     if (!project) {
         titleEl.textContent = "Project Not Found";
-        imagesEl.innerHTML = "<p>Sorry, this project doesn't exist.</p>";
+        imagesEl.innerHTML = "<p>Sorry, this page doesn't exist.</p>";
         return;
     }
  
     document.title = project.title + " | Nicole Raskin";
     titleEl.textContent = project.title;
+
+    // Check if this project has custom HTML content (like About or Contact)
+    if (project.content) {
+        imagesEl.innerHTML = project.content;
+        return; // Exit early so it doesn't try to render images
+    }
  
+    // Otherwise, render the standard image gallery layout
     const layoutClasses = {
         half: "row-item-half",
         quarter: "row-item-quarter"
@@ -30,4 +34,3 @@ function renderProject() {
 }
  
 document.addEventListener("DOMContentLoaded", renderProject);
- 
