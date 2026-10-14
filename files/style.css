@@ -368,14 +368,14 @@ cursor: default;
     display: flex;         /* Enables flexbox layout */
     flex-wrap: wrap;       /* Allows thumbnails to wrap to the next line */
     justify-content: flex-start; /* Aligns thumbnails to the left */
-    row-gap: 1rem;         /* Space between rows */
+    row-gap: 6rem;         /* Space between rows */
 }
 
 .project-thumbnail {
     display: block;
-    width: 277px;
-    height: 250px;
-    margin: 0 35px 12px 0;
+    width: 380px;
+    height: 330px;
+    margin: 0 45px 12px 0;
     position: relative;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
@@ -533,7 +533,7 @@ footer p {
 
 .project-page-content {
         margin-left: 250px; 
-        width: calc(100% - 250px);
+        width: 1400px;
         min-width: 600px; /* This prevents the "squishing" that looks like sliding */
         padding: 2rem;
         background-color: white; /* Ensures it covers anything behind it */
@@ -574,7 +574,7 @@ footer p {
 @media screen and (min-width: 1201px) {
     .page-wrapper {
         display: flex;
-        padding-top: 20px;
+        padding-top: 30px;
         width: 100%; /* Add this */
         max-width: fit-content;
         margin: auto; 
@@ -599,7 +599,7 @@ footer p {
 
     .project-page-content {
         margin-left: 250px; 
-        width: 1000px;
+        width: 1400px;
         padding: 2rem;
         /* ADD THIS LINE BELOW */
         box-sizing: border-box;
@@ -619,7 +619,7 @@ footer p {
     /* Remove the 10rem margins you had earlier since we have a sidebar now */
     section {
         margin: 0 auto; 
-        max-width: 1000px;
+        max-width: 1275px;
     }
 }
 
