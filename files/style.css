@@ -130,9 +130,6 @@ max-height: 300px;
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child { /* when menu closes - turn X to hamburger */
-}
-
 .hamburger-icon span:first-child {
     opacity: 1;
 }
