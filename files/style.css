@@ -1,0 +1,750 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+/*font-family: "Sometype Mono", monospace;*/
+font-family: "Courier Prime", monospace;
+/*font-family: "DM Mono", monospace;*/
+/*font-family: "Courier New", Courier, monospace;*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+/* NAVIGATION */
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color: white; /* Solid white so content doesn't bleed through */
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 20px;
+}
+
+.logo {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.logo:hover {
+cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav { /* dont display hamburger nav when desktop preview */
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+width: 100%;
+height: 2px;
+background-color: black;
+transition: all .3 ease-in-out;
+}
+
+.menu-links {
+position: absolute;
+top: 100%;
+right: 0%;
+background-color: white;
+width: fit-content;
+max-height: 0;
+overflow: hidden;
+transition: all .3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all .3 ease-in-out;
+}
+
+.menu-links li { /* each item in the hamburger menu list */
+    list-style: none;
+}
+
+.menu-links.open { /* limit height of menu */
+max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child { /* when menu open - hamburger lines turn to X */
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child { /* when menu closes - turn X to hamburger */
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 1vh;
+    min-height: 96vh; 
+    height: auto;
+    margin: 0 auto; /* This centers it within the REMAINING space */
+    max-width: 1000px; /* Prevents the art from getting too gigantically wide */
+    box-sizing: border-box;
+}
+
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILES */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container { /* styling the image logo */
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text { /* all text in this div */
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title { /* styling my name */
+font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem; /* Adjust this value to get the look you want */
+}
+
+#social-container { /* styling the icons container */
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+
+.icon { /* styling the icons */
+cursor: pointer;
+    height: 2rem; /* This keeps them small */
+    width: 2rem;  /* Add width to be safe */
+    object-fit: contain; /* Prevents stretching */
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* Added margin here so you don't have to use inline styles in HTML */
+    margin-top: 1rem; 
+}
+
+.btn {
+    font-weight: 600;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover, 
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1, 
+.btn-color-2:hover {
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, .about-details-container {
+    display: flex;
+    justify-content: center;
+}
+ 
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+    width: 2rem; /* Force a small size */
+    height: 2rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
+}
+
+#experience .about-containers .details-container {
+    max-width: 700px; /* Adjust this value as needed */
+    /* You might also want to add margin: 0 auto; if you want to center it when it's smaller than its container */
+    margin: 0 auto;
+}
+
+.section-container {
+    gap: 4rem;
+    height: auto; /* Changed from 80% */
+    display: flex;
+}
+
+.section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* EXPERIENCE SECTION*/
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article {
+display: flex;
+width: 10rem;
+justify-content: flex-start;
+gap: 0.5rem;
+}
+
+article .icon {
+cursor: default;
+}
+
+ /* PROJECTS SECTION */
+
+#projects {
+    position: relative;
+}
+
+.projects-container {
+    display: flex;         /* Enables flexbox layout */
+    flex-wrap: wrap;       /* Allows thumbnails to wrap to the next line */
+    justify-content: flex-start; /* Aligns thumbnails to the left */
+    row-gap: 1rem;         /* Space between rows */
+}
+
+.project-thumbnail {
+    display: block;
+    width: 277px;
+    height: 250px;
+    margin: 0 35px 12px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 1. Create a transparent white overlay sitting above the image */
+.project-thumbnail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* White at 50% opacity */
+  opacity: 0;                                 /* Invisible by default */
+  transition: opacity 0.3s ease;              /* Smooth fade effect */
+  pointer-events: none;                       /* Allows clicks to pass through to the image/link */
+}
+
+/* 2. Fade in the white layer when hovering */
+.project-thumbnail:hover::after {
+  opacity: 1;
+}
+
+.row-items-container{
+    margin-bottom: 25px;
+    display: flex;         /* Enables flexbox layout */
+    flex-wrap: wrap;       /* Allows thumbnails to wrap to the next line */
+    justify-content: space-between; /* Aligns thumbnails to the left */
+    row-gap: 1rem;   
+}
+
+.row-item-full {
+    width: 100%;
+}
+
+.row-item-half {
+    width: 49%;
+}
+
+.row-item-quarter {
+    width: 23%;
+}
+
+.thumbnail-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.6rem 0.8rem;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.thumbnail-caption h3 {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-img-large {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-image-stack {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* This forces the stack */
+    gap: 2rem; /* This adds a nice space between the two image boxes */
+}
+
+/* This adds a gap between images inside the same bordered container */
+/*.details-container.color-container img + img {
+    margin-top: 2rem; /* Adjust this value to change the spacing 
+}*/
+
+.project-title {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.Itemtext {
+    margin: 1rem;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) .1rem solid;
+    border-color: rgb(163, 163, 163);
+    background-color: rgb(250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+   /* Project Page Specifics */
+
+.project-page-content {
+        margin-left: 250px; 
+        width: calc(100% - 250px);
+        min-width: 600px; /* This prevents the "squishing" that looks like sliding */
+        padding: 2rem;
+        background-color: white; /* Ensures it covers anything behind it */
+        box-sizing: border-box; /* Crucial for calc() math */
+}
+
+.page-footer {
+        margin-left: 250px; 
+        width: calc(100% - 250px);
+        min-width: 600px; /* This prevents the "squishing" that looks like sliding */
+        padding: 2rem;
+        background-color: white; /* Ensures it covers anything behind it */
+        box-sizing: border-box; /* Crucial for calc() math */
+}
+
+.project-main-img {
+    height: auto; /* Allows the art to keep its aspect ratio */
+    width: 100%;
+    max-width: 600px;
+}
+
+#project-gallery {
+    height: fit-content;
+    margin-top: 4rem;
+}
+
+/* Ensure images inside details containers don't overflow */
+.details-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjustment for the "Back" button to look consistent */
+.project-page-content .btn-container {
+    margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 1201px) {
+    .page-wrapper {
+        display: flex;
+        padding-top: 20px;
+        width: 100%; /* Add this */
+        max-width: fit-content;
+        margin: auto; 
+    }
+
+    #desktop-nav {
+        width: 200px;
+        float: left;
+        padding-bottom: 20px;
+        position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;            /* Spacing between logo and links */
+        align-items: flex-start;     /* Ensures links are left-aligned */
+    }
+
+    .project-page-content {
+        margin-left: 250px; 
+        width: 1000px;
+        padding: 2rem;
+        /* ADD THIS LINE BELOW */
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
+        border-radius: 5px; 
+    }
+
+    .page-footer {
+        margin-left: 250px; 
+        width: 1000px;
+        padding: 2rem;
+        /* ADD THIS LINE BELOW */
+        box-sizing: border-box;
+        border-radius: 5px; 
+    }
+
+    /* Remove the 10rem margins you had earlier since we have a sidebar now */
+    section {
+        margin: 0 auto; 
+        max-width: 1000px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .page-wrapper {
+        display: block; /* Back to normal stacking */
+    }
+
+    #desktop-nav {
+        display: none; /* Hide sidebar, show hamburger as usual */
+    }
+
+    .project-page-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .page-footer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        height: 8vh;
+        /* Sticky Properties */
+        position: sticky;
+    }
+    #experience, 
+    .experience-details-container {
+        margin-top: 2rem;
+    }
+    #profile, 
+    .section-container {
+        display: block;
+    }
+    .arrow {
+        display: none;
+    }
+    section, 
+    .section-container {
+        height: fit-content;
+    }
+    section {
+        margin: 0 5%;
+    }
+    .section__pic-container {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+    .about-containers {
+        margin-top: 0;
+    }
+    .projects-container {
+        grid-template-columns: repeat(2, 250px);
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contact, footer {
+        height: 40vh;
+    }
+    #profile {
+        height: 83vh;
+        margin-bottom: 0;
+    }
+    article {
+        font-size: 1rem;
+    }
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+    .about-containers, 
+    .contact-info-upper-container, 
+    .btn-container {
+        flex-wrap: wrap;
+    }
+    .contact-info-container {
+        margin: 0.2rem 0.5rem;
+    }
+    .contact-info-container, p, 
+    .nav-links li a {
+        font-size: 1rem;
+    }
+    .experience-sub-title {
+        font-size: 1.25rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: .5rem;
+        text-align: center;
+    }
+    .section__pic-container {
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+    .section__text__p2 {
+        font-size: 1.25rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .text-container {
+        text-align: justify;
+    }
+    .projects-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .project-thumbnail {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 12px;
+    }
+}

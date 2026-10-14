@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Nicole Raskin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lekton:ital,wght@0,400;0,700;1,400&family=Mozilla+Text:wght@200..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Stack+Sans+Text:wght@200..700&family=Trispace:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <nav id="desktop-nav">
+            <div class="logo"><b>NICOLE RASKIN</b></div>
+            <div>
+                <ul class="nav-links">
+                    <a href="indexmain.html">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </ul>
+                 <hr/>
+                <a class="contact" href="https://www.instagram.com/raskin.nicole/">Instagram</a>
+        </nav>
+        <nav id="hamburger-nav">
+    <div class="logo">Nicole Raskin</div>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="menu-links">
+        <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+    </div>
+        </nav>
+
+        <main class="project-page-content">
+            <section id="project-details">
+                <p class="section__text__p1">Case Study</p>
+                <h1 class="title" id="project-title">Loading...</h1>
+
+                <div class="section-container project-image-stack">
+                    <div class="details-container color-container">
+                        <div class="row-items-container" id="project-images">
+                            <!-- Images are inserted here by project-render.js based on ?id= in the URL -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container" style="margin-top: 2rem;">
+                <button class="btn btn-color-1" onclick="location.href='indexmain.html'">Back to Gallery</button>
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+    <div class="page-wrapper">
+        <main class="page-footer">
+            <footer>
+                <p>Copyright &#169; 2025 Nicole Raskin all rights reserved</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="projects-data.js"></script>
+    <script src="project-render.js"></script>
+
+</body>
+</html>
