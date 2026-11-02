@@ -365,17 +365,20 @@ cursor: default;
 }
 
 .projects-container {
-    display: flex;         /* Enables flexbox layout */
-    flex-wrap: wrap;       /* Allows thumbnails to wrap to the next line */
-    justify-content: flex-start; /* Aligns thumbnails to the left */
-    row-gap: 6rem;         /* Space between rows */
+    display: flex;         
+    flex-wrap: wrap;       
+    justify-content: center; /* Centers thumbnails on mobile */
+    gap: 20px;               /* Replaces hardcoded margins with consistent gap */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-thumbnail {
     display: block;
-    width: 380px;
-    height: 330px;
-    margin: 0 45px 12px 0;
+    width: 100%;
+    max-width: 350px;       /* Max desktop size */
+    height: 300px;
+    margin: 0;              /* Remove fixed side margins that cause overflow */
     position: relative;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
@@ -534,7 +537,7 @@ footer p {
 .project-page-content {
         margin-left: 250px; 
         width: 1400px;
-        min-width: 600px; /* This prevents the "squishing" that looks like sliding */
+        /* min-width: 600px; /* This prevents the "squishing" that looks like sliding */
         padding: 2rem;
         background-color: white; /* Ensures it covers anything behind it */
         box-sizing: border-box; /* Crucial for calc() math */
@@ -626,22 +629,26 @@ footer p {
 
 @media screen and (max-width: 1200px) {
 
+    .project-page-content,
+    .page-footer {
+        margin-left: 0;
+        width: 100%;
+        min-width: 0; /* Ensures mobile never forces a 600px minimum width again */
+    }
+
     .page-wrapper {
-        display: block; /* Back to normal stacking */
+        display: block;
+        width: 100%;
+        overflow-x: hidden; /* Prevents any accidental horizontal scrollbar */
+    }
+
+    section {
+        margin: 0 1rem;     /* Safe padding on smaller screens instead of fixed percentages */
+        max-width: 100%;
     }
 
     #desktop-nav {
         display: none; /* Hide sidebar, show hamburger as usual */
-    }
-
-    .project-page-content {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .page-footer {
-        margin-left: 0;
-        width: 100%;
     }
 
     #hamburger-nav {
@@ -676,9 +683,19 @@ footer p {
     .about-containers {
         margin-top: 0;
     }
+
     .projects-container {
-        grid-template-columns: repeat(2, 250px);
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Forces true centering */
+        gap: 20px;               /* Replaces manual margins with even spacing */
+    }
+
+    .project-thumbnail {
+        width: 100%;
+        max-width: 320px;        /* Adjust to fit nicely on mobile screens */
+        height: 280px;
+        margin: 0 !important;    /* Wipes out the desktop 45px right margin */
     }
 }
 
@@ -735,12 +752,17 @@ footer p {
         text-align: justify;
     }
     .projects-container {
-        grid-template-columns: 1fr;
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centers the thumbnails on mobile */
+        gap: 15px;               /* Consistent spacing instead of manual margins */
     }
+    
     .project-thumbnail {
         width: 100%;
-        max-width: 250px;
-        margin: 0 auto 12px;
+        max-width: 280px;        /* Adjust this to your preferred mobile card width */
+        height: 240px;
+        margin: 0 !important;    /* Crucial: clears out that desktop 45px right margin */
     }
+    
 }
