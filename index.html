@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project One | Nicole Raskin</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lekton:ital,wght@0,400;0,700;1,400&family=Mozilla+Text:wght@200..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Stack+Sans+Text:wght@200..700&family=Trispace:wght@100..800&display=swap" rel="stylesheet">
-</head> 
+</head>
 <body>
-    
+
     <div class="page-wrapper">
 
         <nav id="desktop-nav">
@@ -18,8 +18,8 @@
             <div>
                 <ul class="nav-links">
                     <a href="index.html">Projects</a>
-                    <a href="project.html?id=100">About</a> 
-                    <a href="project.html?id=101">Contact</a> 
+                    <a href="project.html?id=100">About</a>
+                    <a href="project.html?id=101">Contact</a>
                 </ul>
                  <hr/>
                 <a class="contact" href="https://www.instagram.com/raskin.nicole/">Instagram</a>
@@ -35,7 +35,7 @@
         <span></span>
         </div>
         <div class="menu-links">
-            <li><a href="index.html" onclick="toggleMenu()">Projects</a></li>      
+            <li><a href="index.html" onclick="toggleMenu()">Projects</a></li>
             <li><a href="project.html?id=100" onclick="toggleMenu()">About</a></li>
             <li><a href="project.html?id=101" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -45,58 +45,165 @@
         <main class="project-page-content">
 
             <section id="projects">
+                <!-- Each project is a .project-card: the thumbnail, then a caption with a title and subtitle.
+                     To change the text, edit the project-caption-title / project-caption-subtitle lines. -->
                 <div class="projects-container">
-                    <a href="project.html?id=15" class="project-thumbnail">
-                        <img src="./assets/Brigandier/Page_42.png" alt="The Emerald Tarot Game Concept Design">
-                    </a>  
-                    <a href="project.html?id=14" class="project-thumbnail">
-                        <img src="./assets/SiegeTheDay/main.png" alt="The Emerald Tarot Game Concept Design">
-                    </a>  
-                    <a href="project.html?id=13" class="project-thumbnail">
-                        <img src="./assets/Muskies/1.png" alt="The Emerald Tarot Game Concept Design">
-                    </a>  
-                    <a href="project.html?id=12" class="project-thumbnail">
-                        <img src="./assets/ChristmasBaking/1.png" alt="The Emerald Tarot Game Concept Design">
-                    </a>  
-                    <a href="project.html?id=11" class="project-thumbnail">
-                        <img src="./assets/ManorLords/main.png" alt="The Emerald Tarot Game Concept Design">
-                    </a>   
-                    <a href="project.html?id=10" class="project-thumbnail">
-                        <img src="./assets/TheEmeraldTarot/image.png" alt="The Emerald Tarot Game Concept Design">
-                    </a>                      
-                    <a href="project.html?id=9" class="project-thumbnail">
-                        <img src="./assets/Invertus/4.png" alt="Invertus Game Concept Design">
-                    </a>   
-                    <a href="project.html?id=8" class="project-thumbnail">
-                        <img src="./assets/InvertusMerch/poster1.jpeg" alt="Invertus Merch Game Concept Design">
-                    </a>  
-                    <a href="project.html?id=7" class="project-thumbnail">
-                         <img src="./assets/Rameneko/Rameneko - 1.png" alt="Rameneko Game Screenshot">
-                    </a>
-                    <a href="project.html?id=6" class="project-thumbnail">
-                        <img src="./assets/LastSummerCamp/1.jpeg" alt="Last Summer Camp Game Concept Design">                        
-                    </a>
-                    <a href="project.html?id=5" class="project-thumbnail">
-                        <img src="./assets/Pacman-Reskin/1.jpg" alt="Fur&Fables Character Design thumbnail">                       
-                    </a>
-                    <a href="project.html?id=4" class="project-thumbnail">
-                        <img src="./assets/Matriza/4.png" alt="Matriza Game Concept Design">
-                    </a>
-                    <a href="project.html?id=3" class="project-thumbnail">
-                        <img src="./assets/BoardGame - SoulGrab/1.jpg" alt="Soul Grab Game Concept Design">                       
-                    </a> 
-                    <a href="project.html?id=2" class="project-thumbnail">
-                        <img src="./assets/TheMoonsLostDaughter/1.jpg" alt="Invertus Game Concept Design">
-                    </a>                                         
-                    <a href="project.html?id=1" class="project-thumbnail">
-                        <img src="./assets/FurAndFables/01.characters.png" alt="Fur & Fables Character Design">
-                    </a>
+
+                    <div class="project-card">
+                        <a href="project.html?id=15" class="project-thumbnail">
+                            <img src="./assets/Brigandier/Page_42.png" alt="Brigandier Game Concept Design">
+                        </a>
+                        <a href="project.html?id=15" class="project-caption">
+                            <div class="project-caption-title">Brigandier</div>
+                            <div class="project-caption-subtitle">Book Illustrations</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=14" class="project-thumbnail">
+                            <img src="./assets/SiegeTheDay/main.png" alt="Siege the Day Animated Series Pilot Artwork">
+                        </a>
+                        <a href="project.html?id=14" class="project-caption">
+                            <div class="project-caption-title">Siege the Day</div>
+                            <div class="project-caption-subtitle">Animated Series Pilot Art Direction</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=13" class="project-thumbnail">
+                            <img src="./assets/Muskies/1.png" alt="The Muskies Poster Design">
+                        </a>
+                        <a href="project.html?id=13" class="project-caption">
+                            <div class="project-caption-title">The Muskies Poster</div>
+                            <div class="project-caption-subtitle">Poster Design</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=12" class="project-thumbnail">
+                            <img src="./assets/ChristmasBaking/1.png" alt="The Secret History of Christmas Baking book cover illustration">
+                        </a>
+                        <a href="project.html?id=12" class="project-caption">
+                            <div class="project-caption-title">The Secret History of Christmas Baking</div>
+                            <div class="project-caption-subtitle">Book Cover Illustration</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=11" class="project-thumbnail">
+                            <img src="./assets/ManorLords/main.png" alt="Manor Lords Game Concept Design">
+                        </a>
+                        <a href="project.html?id=11" class="project-caption">
+                            <div class="project-caption-title">Manor Lords</div>
+                            <div class="project-caption-subtitle">Game Elements Concept Design</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=10" class="project-thumbnail">
+                            <img src="./assets/TheEmeraldTarot/image.png" alt="The Emerald Tarot Game Concept Design">
+                        </a>
+                        <a href="project.html?id=10" class="project-caption">
+                            <div class="project-caption-title">The Emerald Tarot</div>
+                            <div class="project-caption-subtitle">Tarot Deck Illustrations</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=9" class="project-thumbnail">
+                            <img src="./assets/Invertus/4.png" alt="Invertus Game Concept Design">
+                        </a>
+                        <a href="project.html?id=9" class="project-caption">
+                            <div class="project-caption-title">Invertus Game</div>
+                            <div class="project-caption-subtitle">Game Art Direction</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=8" class="project-thumbnail">
+                            <img src="./assets/InvertusMerch/poster1.jpeg" alt="Invertus Merch Design">
+                        </a>
+                        <a href="project.html?id=8" class="project-caption">
+                            <div class="project-caption-title">Invertus Merch</div>
+                            <div class="project-caption-subtitle">Merch Design</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=7" class="project-thumbnail">
+                            <img src="./assets/Rameneko/Rameneko - 1.png" alt="Rameneko Game Screenshot">
+                        </a>
+                        <a href="project.html?id=7" class="project-caption">
+                            <div class="project-caption-title">Rameneko</div>
+                            <div class="project-caption-subtitle">Game Art Direction</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=6" class="project-thumbnail">
+                            <img src="./assets/LastSummerCamp/1.jpeg" alt="Last Summer Camp Game Concept Design">
+                        </a>
+                        <a href="project.html?id=6" class="project-caption">
+                            <div class="project-caption-title">Last Summer Camp</div>
+                            <div class="project-caption-subtitle">Board Game Art Direction</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=5" class="project-thumbnail">
+                            <img src="./assets/Pacman-Reskin/1.jpg" alt="Pacman Reskin">
+                        </a>
+                        <a href="project.html?id=5" class="project-caption">
+                            <div class="project-caption-title">Pacman Reskin</div>
+                            <div class="project-caption-subtitle">Game Reskin</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=4" class="project-thumbnail">
+                            <img src="./assets/Matriza/4.png" alt="Matriza Game Concept Design">
+                        </a>
+                        <a href="project.html?id=4" class="project-caption">
+                            <div class="project-caption-title">Matriza</div>
+                            <div class="project-caption-subtitle">Game Concept Design</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=3" class="project-thumbnail">
+                            <img src="./assets/BoardGame - SoulGrab/1.jpg" alt="Soul Grab Board Game Concept Design">
+                        </a>
+                        <a href="project.html?id=3" class="project-caption">
+                            <div class="project-caption-title">Soul Grab</div>
+                            <div class="project-caption-subtitle">Board Game Concept Design</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=2" class="project-thumbnail">
+                            <img src="./assets/TheMoonsLostDaughter/1.jpg" alt="The Moon's Lost Daughter Game Concept Design">
+                        </a>
+                        <a href="project.html?id=2" class="project-caption">
+                            <div class="project-caption-title">The Moon's Lost Daughter</div>
+                            <div class="project-caption-subtitle">Game Art Direction</div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project.html?id=1" class="project-thumbnail">
+                            <img src="./assets/FurAndFables/01.characters.png" alt="Fur & Fables Character Design">
+                        </a>
+                        <a href="project.html?id=1" class="project-caption">
+                            <div class="project-caption-title">Fur &amp; Fables</div>
+                            <div class="project-caption-subtitle">Character Design</div>
+                        </a>
+                    </div>
 
                 </div>
 
             </section>
         </main>
-        
+
 </div>
 
 
@@ -109,6 +216,6 @@
     </div>
 
     <script src="script.js"></script>
-    
+
 </body>
 </html>

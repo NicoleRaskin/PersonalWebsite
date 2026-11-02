@@ -368,7 +368,7 @@ cursor: default;
     display: flex;         
     flex-wrap: wrap;       
     justify-content: center; /* Centers thumbnails on mobile */
-    gap: 20px;               /* Replaces hardcoded margins with consistent gap */
+    gap: 40px;               /* Replaces hardcoded margins with consistent gap */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -771,7 +771,7 @@ body.lightbox-open {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Forces true centering */
-        gap: 20px;               /* Replaces manual margins with even spacing */
+        gap: 50px;               /* Replaces manual margins with even spacing */
     }
 
     .project-thumbnail {
@@ -886,6 +886,7 @@ body.lightbox-open {
     }
     .title {
         font-size: 2rem;
+        padding: 1rem;
     }
     .text-container {
         text-align: justify;
@@ -894,7 +895,7 @@ body.lightbox-open {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Centers the thumbnails on mobile */
-        gap: 35px;               /* Consistent spacing instead of manual margins */
+        gap: 50px;               /* Consistent spacing instead of manual margins */
     }
     
     .project-thumbnail {
@@ -904,4 +905,56 @@ body.lightbox-open {
         margin: 0 !important;    /* Crucial: clears out that desktop 45px right margin */
     }
 
+}
+/* PROJECT CARDS: thumbnail + caption (title and subtitle) on the Projects page */
+
+.project-card {
+    width: 100%;
+    max-width: 350px;           /* same as the old thumbnail max width */
+}
+
+.project-card .project-thumbnail {
+    max-width: none;            /* the card now controls the width */
+}
+
+.project-caption {
+    display: block;
+    margin: 0;                  /* cancels the global 20px margin on links */
+    padding-top: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+.project-caption-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: black;
+}
+
+.project-caption-subtitle {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: rgb(110, 110, 110);
+}
+
+.project-caption:hover .project-caption-title {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    .project-card {
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-card {
+        max-width: 280px;
+    }
+
+    .project-caption-title {
+        font-size: 1rem;        /* keeps the title from shrinking with the generic mobile text rules */
+    }
 }
