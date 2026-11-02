@@ -728,10 +728,24 @@ footer p {
     .contact-info-container {
         margin: 0.2rem 0.5rem;
     }
+
     .contact-info-container, p, 
     .nav-links li a {
         font-size: 1rem;
     }
+
+    .contact-info-container p{
+        font-size: medium;
+    }
+
+    .contact-info-container a{
+        display: inline-block;        /* Prevents it from acting like a massive block */
+        margin: 20px;
+        overflow-wrap: break-word;    /* Forces long email strings to wrap */
+        word-break: break-word;
+        max-width: 100%;              /* Ensures it stays inside the container */
+    }
+    
     .experience-sub-title {
         font-size: 1.25rem;
     }
@@ -771,8 +785,4 @@ footer p {
         margin: 0 !important;    /* Crucial: clears out that desktop 45px right margin */
     }
 
-    .contact-info-container p{
-        font-size: medium;
-    }
-    
 }
