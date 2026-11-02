@@ -497,12 +497,15 @@ cursor: default;
 .contact-info-upper-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;        /* Ensures items stack nicely on smaller screens */
     border-radius: 2rem;
     border: rgb(53, 53, 53) .1rem solid;
     border-color: rgb(163, 163, 163);
     background-color: rgb(250, 250, 250);
     margin: 2rem auto;
     padding: 0.5rem;
+    box-sizing: border-box;
+    max-width: 100%;        /* Prevents the box itself from overflowing the screen */
 }
 
 .contact-info-container {
@@ -510,10 +513,13 @@ cursor: default;
     align-items: center;
     gap: .5rem;
     margin: 1rem;
+    min-width: 0;           /* CRITICAL: Allows flex items to shrink and wrap */
 }
 
 .contact-info-container p {
-font-size: larger;
+    font-size: larger;
+    overflow-wrap: break-word; /* Forces long email strings to wrap onto the next line */
+    word-break: break-word;    /* Fallback for older browsers */
 }
 
 .contact-icon {
@@ -755,7 +761,7 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Centers the thumbnails on mobile */
-        gap: 15px;               /* Consistent spacing instead of manual margins */
+        gap: 35px;               /* Consistent spacing instead of manual margins */
     }
     
     .project-thumbnail {
@@ -763,6 +769,10 @@ footer p {
         max-width: 280px;        /* Adjust this to your preferred mobile card width */
         height: 240px;
         margin: 0 !important;    /* Crucial: clears out that desktop 45px right margin */
+    }
+
+    .contact-info-container p{
+        font-size: medium;
     }
     
 }
