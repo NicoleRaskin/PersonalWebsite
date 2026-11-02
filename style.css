@@ -847,11 +847,11 @@ body.lightbox-open {
     }
 
     .row-item-half {
-        width: 100%;             /* stack half-width images one per row */
+        width: 49%;             /* stack half-width images one per row */
     }
 
     .row-item-quarter {
-        width: 49%;              /* quarter images go two per row instead of four */
+        width: 23%;              /* quarter images go two per row instead of four */
     }
 
     .lightbox-prev,
